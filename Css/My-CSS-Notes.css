@@ -1,0 +1,163 @@
+/*my CSS Notes : */
+
+/*1.0                                         Ways To Select "aka" variant ways of selection and multiple selections                         */
+
+#id {
+
+}
+
+
+/* more than one selector */
+.class, .class2 {
+
+}
+
+#id1, #id2 {
+
+}
+
+h1, h2 {
+
+}
+
+
+h1.para3 {
+  /* it means the h1 element with the class .para3 */
+}
+
+/*selecting using attributes*/
+h1[color] {
+
+}
+
+/*more specific attribute selectors*/
+p[lang="fr"] {
+  property: property;
+}
+
+
+/*siblings Selectors*/
+h1+p {  /*it selects the h2 and its direct next element if they are siblings*/
+  color: currentColor;
+}
+
+h1~p { /* it selects the h2 and every other sibling when they have the same father */
+  color: currentColor;
+}
+
+
+                    /*2.0        common properties and their values with a short clarification             */
+
+/* 2.1-----every thing consistent with fonts and text */
+.text, .font,  {
+  text-align:center left right;    /*controls the alignment of the text*/
+  text-decoration: overline line-through underline inherit; /*obvious*/
+  text-shadow: 3px 3px orange; /* gives a shadow to the text 3px hor 3px ver 20px blur effect color*/
+  line-height: 25px 1.2em 150%; /* control the space between lines of text */
+  font-size: 25px 1.2em 150%;
+  font-style: italic normal oblique; /*model al 5a6*/
+  font-weight: bold bolder lighter normal 100 200 ; /*tha5anet al5a6*/
+  font-family: sans-serif inherit cursive; /* no3 al5a6 */
+}
+
+/* 2.2------everything consistent with the Box Model and Positioning*/
+
+.borders {
+  border-color: #345623 #FFF; /*etc.*/
+  border-width: medium thin thick 25px 2em;
+  border-style: dashed dotted outset groove double; /*etc*/
+  border-radius: 25px 4em 50%; /*the radius of the border*/
+  /* i can choose freely the sides of the border i want to handle */
+  border-left-color:;
+  border-top-right-radius: ;
+  border-bottom-style: ;
+}
+
+.paddings { /* al padding bi3bber 3n al7ashwe almawjoode ben al content tb3 al box model wel border */
+  padding: 20px 1.2em 50%;
+  padding-left: ;
+  padding-top: ;
+  padding-right: ;
+  padding-bottom: ;
+  /* the last listed 4 properties can be written as follos clockwise top right bottom left*/
+  padding: 50px 25px 15px 10px;
+  /* if all directions have the same value for example 50px we can right it as the first line */
+  padding : 50px 50px 50px 50px; /* = */ padding: 50px;
+}
+
+
+/*margin property*/
+.margins { /* al margin bi3bber 3n b3d al box model aw momken 2ol al border tb3o 3n taraf alsaf7a :D w25iran fhmna */
+  margin: auto 20px 1.3em 30%;
+  margin-left: ;
+  margin-top: ;
+  margin-right: ;
+  margin-bottom: auto;
+  /*nafs al7aki bintbe2 3la al margin w2t 7t 4 kl w7de shi aw w2t 7tton kllon nafs alshi nbikffi 7t kime w7de  */
+  /* an Important Note : margin can take negative values */
+}
+
+/*float property*/
+.floating {
+  float: left, right; /* its better to use it the width of the floated elements represented as Persentage 50% */
+  /*it's also good to know that it will be out of the browsers controlled flow of the webpage*/
+  /* since its out of the flow it will help us a little with a positioning trick if I want to place some element next to a floated
+     one then I should put the floated one before the element which I want it next to the floted one*/
+}
+
+/*also a common thing is to convert the inline-type elements to block-type elements because it'll be easier with positioning ,...
+  we do that like in the example below */
+
+/*display property*/
+.converting-to-block{
+  display: block; /* it has other values that need to be revisited later */
+  display: inline-block; /* it will give me the block I need without breaking the line*/
+}
+
+/*position property*/
+.positioning {
+  position: absolute; /* it tells the browser to put the element in an absolute location which should follow in the next lines */
+
+  top: 30px 1.5em 30%;
+  right: 30px 1.5em 30%;  /* and they can be described as the absolute position
+                             but it's only allowed on of each for example top-right top-left bottom-right etc..
+                             the 4 together won't work*/
+  bottom: 30px 1.5em 30%;
+  left: 30px 1.5em 30%;
+
+
+
+  position: fixed; /*not too much used it's not so useful so if you wanna know how it behaves try it yourself */
+}
+
+/*overflow property*/
+.overflowing {
+  overflow: scroll hidden visible;  /*try it to remember what it can do
+                                      but it has something to do with the
+                                      short element so it can make it scrollable or hide parts of it or something */
+}
+
+/*cursor property*/
+.cursor {
+  cursor: help; /* it changes the cursor's icon when hovering over some element */
+
+}
+
+/* Lists  */
+.lists {
+  list-style: none; /*none will remove the dots from ul element */
+}
+
+/* width and height */
+.dimention{
+  height: 25px; /* this will temper with centered text or whatever element you have vertically so it's a good prctise  */
+  line-height: 25px; /* to keep in mind to use this property to recenter ur text vertically */
+
+  width: 50px 1.5em 20%
+}
+
+.opacity {
+  opacity: 0.3 ;
+  background: linear-gradient(); /* check them out */
+  transition: opacity 1s ease-in-out; /* useful with the hovers effects */
+}
