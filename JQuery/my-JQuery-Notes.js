@@ -9,7 +9,7 @@
 
 // the important thing is that the JQuery code must be executed after the page is fully Loaded and therefor we use the ready function
 
-$("document").ready(function() {
+$(document).ready(function() {
   // all JQuery Code goes here
 });
 
@@ -253,7 +253,7 @@ $("document").ready(function() {
       });
     });
 
-    // but i can choose my own shortcut instead of the $ bling as follows : 
+    // but i can choose my own shortcut instead of the $ bling as follows :
       var jq = $.noConflict();
       jq(document).ready(function () {
         jq("button").click(function () {
@@ -262,3 +262,18 @@ $("document").ready(function() {
       });
 
       // see the jQuery MISC Reference. http://www.w3schools.com/jquery/jquery_ref_misc.asp
+
+
+
+
+
+      /* Usefull Tricks */
+
+      "sliding throw the page" :
+          $("theButtonToBeClicked").click(function () {
+            $("html, body").animate({ 
+
+              scrollTop : $("thePlaceYouWantToGoTo").offset().top
+
+            }, 1000/*the time lapse*/);
+          });
