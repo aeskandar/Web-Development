@@ -183,3 +183,82 @@ $("document").ready(function() {
       });
 
       //Example: of callback function use:
+        ///////////////////////
+
+  //4.4 Add Elements: append(), prepend(), after(), before() :
+    //Example:
+      $("p").append("Some appended Text"); // the append("some text") method inserts the content at the END of the selected Elements
+      $("p").prepend("Some prepended text"); // the prepend("some text") method inserts content at the BEGINING of th selected Elements
+
+      // i can also add html markup its no problem
+        // Example:
+        $(document).ready(function(){
+          $("#btn1").click(function(){
+            $("p").prepend("<b>Prepended text</b>. ");
+          });
+          $("#btn2").click(function(){
+            $("ol").prepend("<li>Prepended item</li>");
+          });
+        });
+
+    // i can also add several new Elements with append() and prepend():
+      //Example:
+        function appendText() {
+          var txt1 = "<p>Text.</p>"; // create Element with HTML
+          var txt2 = $("<p></p>").text("Text.");
+          var txt3 = document.createElement("p");
+          txt3.innerHTML = "text."
+          $("body").append(txt1, txt2, txt3);
+        }
+
+  //4.5 Remove Elements remove() nad empty() :
+    //Example:
+      $("#div1").remove(); //the remove() Method removes the selected Element anf its child elements
+      // the remove() Mehtod accepts also a parameter which allows me to filter the elements to be removed
+        $("p").remove(".test") // removes all p element that also have the .test class
+        $("p").remove(".test, .demo, #koko"); // removes the p element that have the named classes and th ID koko
+
+
+      $("#div2").empty(); // the empty() Methos removes the child elements of the selected element
+
+  //4.6 JQuery CSS  classes
+    .addClass("kaka koko") // adds one or more classes
+    .removeClass("kaka koko") // removes one or more classes form the selected elements
+    .toggleClass("kaka") // togles between adding or removing the mentioned class to the selected element
+    .css("propertyname") // returns the value of the selected property
+      $("p").css("background-color");
+
+    .css("propertyname", "value") // sets the property to the value
+      $("p").css("background-color", "red");
+
+    .css({ // for multiple property setting
+      "propertyname" : "value1",
+      "propertyname" : "value2"
+    });
+
+//5 JQuery AJAX
+  // coming soon
+
+//6 JQuery Misc : the jQuery noConflict() Method
+
+  // the noConflict Method releases the Hold on the $ shortcut identifier , so that other scripts can use it
+  //because a lot of JS other frameworks also use the $ identifier and when i wanna use them both without the noConflict Method one of them is gonna stop working
+  // I can still use J query , simpy by writing the full name istead of the $
+
+  //Example:
+    $.noConflict();
+    jQuery(document).ready(function () {
+      jQuery("button").click(function () {
+        jQuery("p").text("jQuery is still runnin!! ");
+      });
+    });
+
+    // but i can choose my own shortcut instead of the $ bling as follows : 
+      var jq = $.noConflict();
+      jq(document).ready(function () {
+        jq("button").click(function () {
+          jq("p").text("JQuery is still working!");
+        });
+      });
+
+      // see the jQuery MISC Reference. http://www.w3schools.com/jquery/jquery_ref_misc.asp
