@@ -83,7 +83,7 @@ h1~p { /* it selects the h2 and every other sibling when they have the same fath
   padding: 50px 25px 15px 10px;
   /* if all directions have the same value for example 50px we can right it as the first line */
   padding : 50px 50px 50px 50px; /* = */ padding: 50px;
-}
+} 
 
 
 /*margin property*/
@@ -125,8 +125,13 @@ h1~p { /* it selects the h2 and every other sibling when they have the same fath
   bottom: 30px 1.5em 30%;
   left: 30px 1.5em 30%;
 
-
-
+	/*this code will always position the element i want horizontally */
+			position: relative;
+    			top: 50%;
+    			-webkit-transform: translateY(-50%);
+    			-ms-transform: translateY(-50%);
+    			transform: translateY(-50%);	
+	
   position: fixed; /*not too much used it's not so useful so if you wanna know how it behaves try it yourself */
 }
 
