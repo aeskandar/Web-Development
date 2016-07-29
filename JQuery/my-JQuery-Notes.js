@@ -129,9 +129,57 @@ $("document").ready(function() {
             $(selector).stop(stopAll, goToEnd); // the parameter stopAll specifies whether also the animation Queue should be cleared or not , Default is false
             // The optional goToEnd parameter specifies whether or not to complete the current animation immediately. Default is false.
 
-        //2.2.6 Method Chaining
-          $("div").css("color", "red").slideUp(2000).slideDown(6000);
-          // OR
-          $("div").css("color", "blue")
-                  .slideUp(20000)
-                  .slideDown(80000);
+// 3 Method Chaining
+  $("div").css("color", "red").slideUp(2000).slideDown(6000);
+    // OR
+  $("div").css("color", "blue")
+          .slideUp(20000)
+          .slideDown(80000);
+
+// 4 JQuery HTML DOM Manipulation
+  //4.1 Get Content: text(), html(), and val() :
+      //Example:
+        $("#btn1").click(function () {
+          alert("Text: " + $("#test").text()); // .text() Returns the text Content of selected elements
+        });
+        $("#btn1").dblclick(function () {
+          alert("HTML: " + $("#test").html()); // .html() Returns the Content of selected elements (including html markup)
+        });
+        $("#btn1").click(function () {
+          alert("Value: " + $("#test").val()); // .val() Returns the value of form fields
+        });
+
+  //4.2 Get Attributes: attr() :
+      //Example:
+        $("button").click(function () {
+          alert($("#w3s").attr("href"));
+        });
+
+        var klasse = $("#theOne").attr("class");
+        $(this).click(function () {
+            $(this).attr("class", klasse);
+            // or it can set many attributes at the same time as follows :
+              $(this).attr({
+                "href" : "https://facebook.com",
+                "class" : klasse,
+                "title" : "facebook home page"
+              });
+          });
+
+  //4.3 Set Content : text("parameter", callback), html("parameter", callback) and val("parameter", callback) :
+  /*the CALLBACK function has two parameters: the index of the current element in the list of elements selected and the original (old) value, then I  return the String
+    I wish to use as the new Value from the function*/
+    //Example: of Setters
+      $("#btn1").click(function () {
+        $("#test1").text("Hello World!"); // .text("parameter") Sets the Text Content of selected Elements
+      });
+
+      $("#btn2").click(function () {
+        $("#test2").html("<b>Hello World!</b>"); // .html("parameter") Sets the content of selected Elements (including html markup)
+      });
+
+      $("#btn3").click(function () {
+        $("#test3").val("Dolly Duck"); // .val("parameter") Sets the value of Form fields
+      });
+
+      //Example: of callback function use:
