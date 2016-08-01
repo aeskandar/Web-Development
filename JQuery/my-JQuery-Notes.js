@@ -307,57 +307,116 @@ $("div").on({
 
         //make sure to include the jquery-ui library and its CSS stylesheets http://jquery-ui.com
         //1.widgets :: just handfull mentioned of many widgets
+        /***********/
+        "the options and methods mentions are just a few examples of many possibilitis vivit API for more " /*************/
         // 1.1 the Date Picker
-        $("input").datepicker(); // this date picker method will give me a customized calender to choose Date
+        $("input").datepicker({
+            property: value
+        }); // this date picker method will give me a customized calender to choose Date
         this.Properties // the datePicker({Propertie: value}) Properties go in the curly brackets and it can take one or more seperated by a ',' comma
         // numberOfMonths, changeYear, changeMonth, weekHeader, showOtherMonths .... for more see the jquery UI API documentation http://api.jqueryui.com/ widgets.
         //Example:
         $("#pickdate").datepicker({
-            numberOfMonths: 1, //
-            changeMonth: true, //
-            changeYear: true, //
-            showWeek: true, //
-            weekHeader: "Week", //
-            showOtherMonths: true,
-            minDate: new Date(2000, 11, 25),
-            maxDate: new Date(2001, 11, 25),
-            showButtonPanel: true,
-            closeText: "Close Calendar",
-            currentText: "Heute",
+            numberOfMonths: 1, // how many months to display at the same time
+            changeMonth: true, // a dropdown to choose the month
+            changeYear: true, // a dropdown to choose year manually
+            showWeek: true, // shows the week number
+            weekHeader: "Week", // gives a header to the week
+            showOtherMonths: true, // show days of last month depends on where the month starts and ends
+            minDate: new Date(2000, 11, 25),  //
+            maxDate: new Date(2001, 11, 25),//
+            showButtonPanel: true,  // shows a pannel where we can add buttons and so on  ....
+              closeText: "Close Calendar", //
+              currentText: "Heute",
             yearSuffix: " BC"
         });
 
         //1.2 the toolTip
-        $("randomelement").tooltip();
-        this.properties // same rules
+        $("randomelement").tooltip({
+            property: value
+        }); this.properties // same rules
         // content, track, show: {effect: "effectname", duration: 800}, hide: {effect: "effectname", duration: 800}....
-        /* just a hint the shiw and hide options are for */
+        /* just a hint the show and hide options are for */
         Combining /*Effects*/
         //Example:
         $("img").tooltip({
-            content: "Big Panda",
-            track: true,
-            show: {
+            content: "Big Panda", // overrides the title attribute of the html
+            track: true,    //
+            show: {      //shows an effect  of the tooltip when appearing
                 effect: "fadeIn",
                 duration: 800
             },
-            hide: {
+            hide: { // shows an effect when disappearing
                 effect: "fadeOut",
                 duration: 800
             }
         });
-        //1.3 the Accordion
+        //1.3 the Accordion : accordion()
         $("randomelement").accordion({
-          collapsible: true,
-          event: "mouseover",
-          animate: 800,
-          active: 1,
-          icons: {
-            header: "ui-icon-pluse",
-            activeHeader: "ui-icon-minus"
-          }
+            property: value
+        }); // kind of verticall menu
+        this.properties // same rules...
+        //collapsible, event , animate ...
+        //Example:
+        $("randomelement").accordion({
+            collapsible: true,  //
+            event: "mouseover", //
+            animate: 800, //
+            active: 1,  // which panel of the accordion to be opened as default
+            heightStyle: "content", // the space of box in which the content appear in
+            icons: {      // change the icons of opened and closed accordion tabs
+                header: "ui-icon-plus",
+                activeHeader: "ui-icon-minus"
+            },
         });
+        //1.4 the Menu widget : menu()
+        $("randomelement").menu() // very similar to the accordin but it needs a kinda special HTML markup
+        this.properties // same rules
+        //menus, icons, ....
+        //Example:
+        $("#verticalMenu").menu({
+                menus: "div", // shows the submenu and the header of the option
+                icons: {
+                    submenu: "ui-icon-circle-triangle-e" //changes the icon of the little submenus
+                },
 
-        // 2. the theme Roller is Awesome http://jqueryui.com/themeroller/
+                //1.5 the dialog : dialog()
+                $("#box").dialog({
+                    property: value
+                }) // it creates a dialog box
+                this.properties // same rules
+                //modal, closeOnEscape, autoOpen , draggable, ...
+                //Example:
+                $("#box").dialog({
+                    autoOpen: false, // whether the dialog box is opened by default or not when the page loads
+                    draggable: false, // whether its movable by the user
+                    resizable: false,   //
+                    hide: "explode", //
+                    show: "bounce", //
+                    closeOnEscape: false,  // activating and deactivating the esc button for closing the box
+                    modal: false    // shuts down other page Functionalities when the box opens 
+                });
 
-        // 3.
+                //1.6 Tabs Widget : tabs()
+                $(".selector").tabs({
+                    property: value
+                }) // it creates a horizontal menu
+                this.properties // same rules
+                // active, disabled[index, index], event, heightStyle, ....
+                //Example:
+                $("#maincontainer").tabs({
+                    collapsible: true,
+                    active: 1,
+                    heightStyle: "content",
+                    event: "mouseover",
+                    disabled: [1, 2]
+                });
+
+
+
+
+
+
+                // 2. the theme Roller is Awesome http://jqueryui.com/themeroller/
+
+                // 3.

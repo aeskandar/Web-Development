@@ -60,6 +60,7 @@ h1~p { /* it selects the h2 and every other sibling when they have the same fath
   font-family: sans-serif inherit cursive; /* no3 al5a6 */
 }
 
+
 /* 2.2------everything consistent with the Box Model and Positioning*/
 
 .borders {
@@ -83,7 +84,7 @@ h1~p { /* it selects the h2 and every other sibling when they have the same fath
   padding: 50px 25px 15px 10px;
   /* if all directions have the same value for example 50px we can right it as the first line */
   padding : 50px 50px 50px 50px; /* = */ padding: 50px;
-} 
+}
 
 
 /*margin property*/
@@ -130,8 +131,8 @@ h1~p { /* it selects the h2 and every other sibling when they have the same fath
     			top: 50%;
     			-webkit-transform: translateY(-50%);
     			-ms-transform: translateY(-50%);
-    			transform: translateY(-50%);	
-	
+    			transform: translateY(-50%);
+
   position: fixed; /*not too much used it's not so useful so if you wanna know how it behaves try it yourself */
 }
 
