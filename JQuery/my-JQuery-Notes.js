@@ -394,7 +394,7 @@ $("div").on({
                     hide: "explode", //
                     show: "bounce", //
                     closeOnEscape: false,  // activating and deactivating the esc button for closing the box
-                    modal: false    // shuts down other page Functionalities when the box opens 
+                    modal: false    // shuts down other page Functionalities when the box opens
                 });
 
                 //1.6 Tabs Widget : tabs()
@@ -420,3 +420,14 @@ $("div").on({
                 // 2. the theme Roller is Awesome http://jqueryui.com/themeroller/
 
                 // 3.
+                ///
+                //
+                //
+                //
+                //
+                //
+                //
+                //
+                //
+                //
+                //
